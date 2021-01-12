@@ -1,0 +1,27 @@
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: grey;
+  outline: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+  border: none;
+
+  &:active {
+    background: orange;
+    box-shadow: -2px -2px 5px black;
+  }
+
+  &:disabled {
+    box-shadow: none;
+  }
+}
+
+.active {
+  background: orange;
+  box-shadow: -2px -2px 5px black;
+}

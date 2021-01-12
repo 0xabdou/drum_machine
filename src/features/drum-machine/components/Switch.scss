@@ -1,0 +1,27 @@
+.Switch {
+  display: flex;
+  width: 60px;
+  height: 25px;
+  background: black;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: 500ms ease;
+
+  .inner {
+    background: blue;
+    width: 40%;
+    transition: 200ms ease;
+    cursor: pointer;
+  }
+
+  .on {
+    margin-left: 60%;
+  }
+}
+
+.disabled {
+  .inner {
+    background: grey;
+    cursor: auto;
+  }
+}

@@ -1,0 +1,45 @@
+#volume {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+  height: 30px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 8px;
+    background: blue;
+    box-shadow: 1px 1px 2px black;
+    cursor: pointer;
+    margin-top: -12.5px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    background: grey;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px black;
+    height: 5px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    &::-webkit-slider-thumb {
+      background: gray;
+      box-shadow: none;
+      cursor: auto;
+      margin-top: -11px;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: grey;
+      border: none;
+      box-shadow: none;
+      cursor: auto;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

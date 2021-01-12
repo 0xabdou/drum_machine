@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './features/app/App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+const appHeight = () => {
+  const doc = document.documentElement;
+  const appHeight = window.innerHeight;
+  doc.style.setProperty('--app-height', `${appHeight}px`);
+};
+
+window.addEventListener('resize', appHeight);
+appHeight();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
